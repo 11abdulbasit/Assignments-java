@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+
+    Scanner sc = new Scanner(System.in);
+    // --< P=VI FORMULA >--
+        double power ,current , voltage;
+        System.out.print("Enter Voltage : ");
+        voltage = sc.nextDouble();
+        System.out.print("Enter Current : ");
+        current = sc.nextDouble();
+        power = voltage * current;
+
+        System.out.println("---------------------------------------------");
+        System.out.println("POWER : "+power+" watt");
+}
+}
