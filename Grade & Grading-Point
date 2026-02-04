@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int i;
+        int total = 0;
+        int subject = 6;
+        System.out.println("Enter marks of Subjects");
+        System.out.println("-------------------------------------");
+        for (i=1;i<=6;i=i+1){
+            System.out.print("Subjest"+"\t"+ i +" : ");
+            total=total+ sc.nextInt();
+        }
+        double avg = total/6.0;
+        double [] marks = {90,85,80,75,71,68,64,61,57,53,45,0};
+        String[] grades = {"A+","A","A-","B+","B","B-","C+","C","C-","D+","D","F"};
+        double[] points = {4,4,3.8,3.4,3,2.8,2,1.8,1.4,1,0};
+        for (i=0;avg<marks[i];i++);
+        System.out.println("---------------------------------------------");
+        System.out.println("Average : "+ avg);
+        System.out.println("Grade : "+ grades[i]);
+        System.out.println("Grading Point : "+ points[i]);
+    }
+}
