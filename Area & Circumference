@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+
+    Scanner sc = new Scanner(System.in);
+    double r,c ;
+    double pi = 3.142;
+        System.out.print("Enter Radius of a circle : ");
+        r = sc.nextDouble();
+        c = 2*pi*r;
+        r = pi*r*r;
+        System.out.println("___________________________");
+        System.out.println("Circumference of a circle : "+ c );
+        System.out.println("Area of a circle : "+ r);
+}
+}
