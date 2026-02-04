@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Main {
+    public static void main (String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Original price : ");
+        double originalprice = sc.nextDouble();
+        System.out.println("Enter discount percentage : ");
+        double discountpercentage = sc.nextDouble();
+        double discountedprice = originalprice*(discountpercentage)/100;
+        double sellingprice = originalprice-discountedprice;
+        System.out.println("Discounted Price : "+ discountedprice);
+        System.out.println("Selling Price : "+ sellingprice);
+
+
+    }
+}
