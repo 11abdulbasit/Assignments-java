@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String data ="";
+
+        while (true) {
+
+            System.out.print("Enter country name: ");
+            String name = sc.nextLine();
+
+            System.out.print("Enter population: ");
+            long population = sc.nextLong();
+            sc.nextLine();
+
+            if (population <= 0) {
+                break;
+            }
+            
+            data = data + "\n"+
+                    "Country name: " + name + "\n" +
+                    "Population: " + population + "\n" +
+                    "---------------------\n";
+        }
+        System.out.println(data);
+    }
+}
