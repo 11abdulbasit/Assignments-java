@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+
+    Scanner sc = new Scanner(System.in);
+    double a ,h , b,k;
+        System.out.print("Enter length of first parallel side : ");
+        a = sc.nextDouble();
+        System.out.print("Enter length of second parallel side : ");
+        b = sc.nextDouble();
+        System.out.print("Enter height : ");
+        h = sc.nextDouble();
+        k = h*(a+b)/2;
+        System.out.println("__________________________");
+        System.out.println("Area of Trapeziod : " + k);
+
+}
+}
