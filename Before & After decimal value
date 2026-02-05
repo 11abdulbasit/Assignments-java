@@ -1,0 +1,19 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        String num = sc.next();
+
+        int a = num.indexOf(".");
+
+        int before = a;
+        int after = num.length() - a - 1;
+        System.out.println("----------------------------");
+        System.out.println("Digits before decimal = " + before);
+        System.out.println("Digits after decimal = " + after);
+    }
+}
