@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int semesters = 8;
+        double totalMarks = 0;
+        double totalPoints = 0;
+
+        double[] marksRange = {90,85,80,75,71,68,64,61,57,53,45,0};
+        String[] grades = {"A+","A","A-","B+","B","B-","C+","C","C-","D+","D","F"};
+        double[] points = {4,4,3.8,3.4,3,2.8,2.4,2,1.8,1.4,1,0};
+
+        System.out.println("Enter Marks of 8 Semesters");
+        System.out.println("--------------------------------------------------");
+
+        for (int s = 1; s <= semesters; s++) {
+
+            System.out.print("Semester " + s + " Marks: ");
+            double marks = sc.nextDouble();
+            totalMarks = totalMarks + marks;
+
+            int i;
+            for (i = 0; marks < marksRange[i]; i++) ;
+
+            totalPoints = totalPoints + points[i];
+
+            System.out.println("   Grade : " + grades[i]);
+            System.out.println("   GPA : " + points[i]);
+            System.out.println("--------------------------------------------");
+        }
+
+        double avgMarks = totalMarks / semesters;
+        double cgpa = totalPoints / semesters;
+
+        int i;
+        for (i = 0; avgMarks < marksRange[i]; i++);
+
+        System.out.println("============== FINAL RESULT =================");
+        System.out.println("Average Marks : " + avgMarks);
+        System.out.println("Final Grade   : " + grades[i]);
+        System.out.println("CGPA          : " + cgpa);
+    }
+}
