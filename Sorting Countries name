@@ -1,0 +1,19 @@
+import java.util.Arrays;
+public class Code {
+    public static void main(String[] args) {
+        String[] countryName = {
+                "Pakistan", "India", "Afghanistan", "China", "France",
+                "Japan", "London", "Germany", "Dubai", "Saudi Arabia"
+        };
+
+        System.out.println("***********************************");
+        System.out.println("Sorted Countries names :");
+        System.out.println("-----------------------------------------------------");
+
+        Arrays.sort(countryName, String.CASE_INSENSITIVE_ORDER);
+        for (int i=0; i<countryName.length;i++){
+            System.out.println(countryName[i]);
+        }
+        System.out.println("-----------------------------------------------------");
+    }
+}
