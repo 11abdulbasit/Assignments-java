@@ -1,0 +1,24 @@
+import java.util.Arrays;
+
+public class Code {
+    public static void main(String[] args) {
+
+        String[] countryName = {
+                "Pakistan", "India", "Afghanistan", "China", "France",
+                "Japan", "London", "Germany", "Dubai", "Saudi Arabia"
+        };
+
+        System.out.println("***********************************");
+        System.out.println("Country name with last alphabetical order is:");
+        System.out.println("-----------------------------------------------------");
+
+        Arrays.sort(countryName, String.CASE_INSENSITIVE_ORDER);
+
+        String firstAlphabeticOrderCountry = countryName[0];
+        int position = 0;
+
+        System.out.println(firstAlphabeticOrderCountry);
+        System.out.println("Country Position (index) is: " + position);
+        System.out.println("-----------------------------------------------------");
+    }
+}
