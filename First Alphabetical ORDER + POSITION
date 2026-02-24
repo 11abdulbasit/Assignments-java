@@ -9,7 +9,7 @@ public class Code {
         };
 
         System.out.println("***********************************");
-        System.out.println("Country name with last alphabetical order is:");
+        System.out.println("Country name with First alphabetical order is:");
         System.out.println("-----------------------------------------------------");
 
         Arrays.sort(countryName, String.CASE_INSENSITIVE_ORDER);
