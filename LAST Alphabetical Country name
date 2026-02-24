@@ -1,0 +1,15 @@
+import java.util.Arrays;
+public class Code {
+    public static void main(String[] args) {
+        String [] countryName =
+                {"Pakistan", "India", "Afghanistan", "China", "France", "Japan", "Loandon",
+                        "Germany", "Dubai", "Suadia Arab"};
+        System.out.println("*****************************************************");
+        System.out.println("Country name start with First alphabetical order is : ");
+        System.out.println("-----------------------------------------------------");
+        Arrays.sort(countryName,String.CASE_INSENSITIVE_ORDER);
+        System.out.println(countryName[countryName.length-1]);
+        System.out.println("-----------------------------------------------------");
+            }
+        }
+
