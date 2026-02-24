@@ -1,0 +1,63 @@
+import java.util.Scanner;
+public class Code {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String[] countryName = {"Pakistan", "India", "Afghanistan", "China", "France", "Japan", "Loandon", "Germany", "Dubai", "Suadia Arab"};
+
+        System.out.println("Search country by name:");
+        String a = sc.next();
+        boolean found = false;
+        int position = -1;
+        for (int i = 0; i < countryName.length; i++)
+        {
+            if (a.equalsIgnoreCase(countryName[i])){
+                found = true;
+                position = i;
+            break;}
+        }
+        if (found) {
+            System.out.println("COUNTRY EXIST IN ARRY");
+            System.out.println("COUNTRY Postion (INDEX) is :"+ position);
+        } else {
+
+            System.out.println("COUNTRY not EXIST IN ARRAY");
+
+
+        }
+    }
+}
+
+
+
+
+//Q: Without user input
+
+//import java.util.Scanner;
+public class Code {
+    public static void main(String[] args) {
+    //    Scanner sc = new Scanner(System.in);
+        String[] countryName = {"Pakistan", "India", "Afghanistan", "China", "France", "Japan", "Loandon", "Germany", "Dubai", "Suadia Arab"};
+
+        System.out.println("Search country by name:");
+      //  String a = sc.next();
+        String a = "Pakistan";
+        boolean found = false;
+        int position = -1;
+        for (int i = 0; i < countryName.length; i++)
+        {
+            if (a.equalsIgnoreCase(countryName[i])){
+                found = true;
+                position = i;
+            break;}
+        }
+        if (found) {
+            System.out.println("COUNTRY EXIST IN ARRY");
+            System.out.println("COUNTRY Postion (INDEX) is :"+ position);
+        } else {
+
+            System.out.println("COUNTRY not EXIST IN ARRAY");
+
+
+        }
+    }
+}
