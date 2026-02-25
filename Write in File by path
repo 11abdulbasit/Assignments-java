@@ -1,0 +1,24 @@
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+class Main {
+
+    public static void main(String[] args) {
+
+        String path = "C:\\Users\\Muhammad Haris Khan\\Documents\\Java Codes\\SalesData.txt";
+
+        try (FileOutputStream fos = new FileOutputStream(path)) {
+
+            String data = "Welcome to Sales Data File!\n";
+            data += "Product: Laptop\n";
+            data += "Price: 50000\n";
+
+            fos.write(data.getBytes());
+
+            System.out.println("Successfully written to the file.");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
