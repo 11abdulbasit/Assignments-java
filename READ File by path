@@ -1,0 +1,26 @@
+import java.io.FileInputStream;
+import java.io.IOException;
+
+class Main {
+
+    public static void main(String[] args) {
+
+        String path = "C:\\Users\\Muhammad Haris Khan\\Documents\\Java Codes\\SalesData.txt";
+
+        try {
+
+            FileInputStream sc = new FileInputStream(path);
+
+            int data;
+
+            while ((data = sc.read()) != -1) {
+                System.out.print((char) data);
+            }
+
+            System.out.println("\nSuccessfully read the file.");
+
+        } catch (IOException e) {
+            System.out.println("Error reading file.");
+        }
+    }
+}
