@@ -1,3 +1,64 @@
+//Q:TAKE INPUT BY USER
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[]args) {
+        int[][] square = new int[3][3];
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter elements of 3x3 matrix :");
+        for (int i=0;i<3;i++){
+            for (int j=0;j<3;j++){
+             square[i][j]= sc.nextInt();
+            }
+        }
+                System.out.println("Matrix is :");
+        for (int i=0;i<3;i++){
+            for (int j=0;j<3;j++){
+                System.out.print(square[i][j]+"\t");
+            }
+            System.out.println();
+        }
+        int sum = square[0][0] + square[0][1] + square[0][2];
+        boolean isMagic = true;
+        for (int i = 0; i < 3; i++) {
+            int rowSum = 0;
+            for (int j = 0; j < 3; j++) {
+                rowSum += square[i][j];
+            }
+            if (rowSum != sum)
+                isMagic = false;
+        }
+        for (int j = 0; j < 3; j++) {
+            int columnSum = 0;
+            for (int i = 0; i < 3; i++) {
+                columnSum += square[i][j];
+            }
+            if (columnSum != sum) {
+                isMagic = false;
+            }
+        }
+        int dig1 = square[0][0] + square[1][1] + square[2][2];
+        int dig2 = square[0][2] + square[1][1] + square[2][0];
+     if (dig2!=sum||dig1!=sum) {
+         isMagic = false;
+     }
+     if (isMagic){
+         System.out.println("----------------------------------------------------------");
+         System.out.println("The sum of each row , column and digonal are equal, so");
+         System.out.println("It's a Magic Square");
+     }
+     else {
+         System.out.println("----------------------------------------------------------");
+         System.out.println("The sum of each row , column and digonal are not equal, so");
+         System.out.println("It's not a Magic Square");
+     }
+     }
+    }
+
+
+
+
+
 //Q: 5x5 matrix
 public class Code {
     public static void main(String[] args) {
