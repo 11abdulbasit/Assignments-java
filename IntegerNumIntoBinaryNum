@@ -1,0 +1,84 @@
+//Q:..part-A
+import java.util.Scanner;
+public  class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number : ");
+        long num = sc.nextLong();
+        String binaryNum = Integer.toBinaryString((int) num);
+        System.out.println(binaryNum);
+
+    }
+}   
+//Q:..part-B
+import java.util.Scanner;
+
+public class Main {
+
+    public static int[] toBinaryArray(int num) {
+        int temp = num;
+        int[] binary = new int[32];
+        int index = 0;
+
+        while (temp > 0) {
+            binary[index] = temp % 2;
+            temp = temp / 2;
+            index++;
+        }
+
+        int[] result = new int[index];
+        for (int i = 0; i < index; i++) {
+            result[i] = binary[index - i - 1];
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter an integer: ");
+        int num = input.nextInt();
+
+        int[] arr = toBinaryArray(num);
+
+        System.out.print("Binary Array: ");
+        for (int bit : arr) {
+            System.out.print(bit);
+        }
+    }
+}
+//Q:..part-C
+
+
+import java.util.Scanner;
+
+public class Main {
+
+
+    public static String toBinaryString(int num) {
+
+        String binary = "";
+
+        while (num > 0) {
+            int remainder = num % 2;
+            binary = remainder + binary; 
+            num = num / 2;
+        }
+
+        return binary;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
+
+        String result = toBinaryString(num);
+
+        System.out.println("Binary String: " + result);
+    }
+}
+
+
